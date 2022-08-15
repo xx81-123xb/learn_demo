@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
 /**
@@ -23,7 +24,7 @@ public class POJO_Comparator_Demo1 {
         Peopel peopel_4 = new Peopel("杜六",20,178);
         Peopel peopel_5 = new Peopel("林七",20,169);
         Peopel peopel_6 = new Peopel("阿八",20,169);
-//        Peopel peopel_7 = new Peopel("阿八",20,190);
+        Peopel peopel_7 = new Peopel("阿八",20,169);
 
         ArrayList<Peopel> peopels = new ArrayList<>();
 
@@ -33,6 +34,7 @@ public class POJO_Comparator_Demo1 {
         peopels.add(peopel_4);
         peopels.add(peopel_5);
         peopels.add(peopel_6);
+        peopels.add(peopel_7);
 
         /**
          * 规则:
@@ -67,11 +69,31 @@ public class POJO_Comparator_Demo1 {
 }
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 class Peopel implements Comparable{
+
+    private static final AtomicInteger COUNT=new AtomicInteger(0);
+
     private String name;
     private int age;
     private int length;
+    private int count;
+
+    public Peopel(String name,int age,int length){
+        this.name=name;
+        this.age=age;
+        this.length=length;
+        this.count=COUNT.getAndIncrement();
+    }
+
+    @Override
+    public String toString() {
+        return "Peopel{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", length=" + length +
+                ", count=" + count +
+                '}';
+    }
 
     @Override
     public int compareTo(Object o) {

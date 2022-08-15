@@ -10,6 +10,7 @@
 
     <modules>
         <module>list_sort</module>
+        <module>static_inner_class</module>
     </modules>
 
     <packaging>pom</packaging>
