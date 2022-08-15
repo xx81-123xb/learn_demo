@@ -1,0 +1,19 @@
+.gradle
+.idea
+logs/
+node_modules/
+out/
+target/
+build/
+*.iml
+www/
+webapp/node_modules/
+webapp/proxy.conf.*
+webapp-old/node_modules/
+webapp-old/package-lock.json
+classes/
+\# Ignore Gradle GUI config
+gradle-app.setting
+upload/
+webapp/dist
+webapp-old/dist
