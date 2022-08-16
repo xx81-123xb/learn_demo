@@ -11,6 +11,8 @@
     <modules>
         <module>list_sort</module>
         <module>static_inner_class</module>
+        <module>string_format</module>
+        <module>deep_clone</module>
     </modules>
 
     <packaging>pom</packaging>
