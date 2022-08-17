@@ -16,6 +16,18 @@ public class ShowUtil {
         System.out.println(sb.toString());
     }
 
+    public static <T> void showArray(T[] array){
+        StringBuilder sb = new StringBuilder();
+        sb.append("length:").append(" ").append(array.length).append("\r\n");
+        sb.append("[ ");
+        for (T i : array) {
+            sb.append(i).append(" , ");
+        }
+        sb.delete(sb.lastIndexOf(","),sb.length());
+        sb.append(" ]");
+        System.out.println(sb.toString());
+    }
+
     public static void showMap(Map map){
         StringBuilder sb = new StringBuilder();
         sb.append("key-value length:").append(" "+map.size()).append("\r\n");

@@ -16,6 +16,7 @@
         <module>hashmap_study</module>
         <module>stream_demo</module>
         <module>util</module>
+        <module>mail_demo</module>
     </modules>
 
     <packaging>pom</packaging>
