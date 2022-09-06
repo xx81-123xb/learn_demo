@@ -22,6 +22,7 @@ public class ECBSentence extends Sentence {
 
     @Override
     public void show() {
+        System.out.println("ECB Sentence:");
         System.out.println(this);
     }
 }
