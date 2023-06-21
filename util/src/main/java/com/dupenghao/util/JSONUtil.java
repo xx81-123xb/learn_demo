@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
  */
 public class JSONUtil {
 
-    private static ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static synchronized String toJsonString(Object o){
         String string = null;
