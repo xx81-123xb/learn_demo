@@ -84,4 +84,8 @@ public class SSHLinux {
         return null;
     }
 
+    public boolean isConnected(){
+        return session.isConnected();
+    }
+
 }

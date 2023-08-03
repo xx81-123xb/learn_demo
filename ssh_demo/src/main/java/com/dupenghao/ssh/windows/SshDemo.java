@@ -8,6 +8,11 @@ import com.dupenghao.ssh.ssh.SSHLinux;
  */
 public class SshDemo {
 
+    /**
+     * 测试:windows的ssh连接需要windows开启ssh服务
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         String ip="192.168.1.89";
         int port=22;
@@ -16,7 +21,9 @@ public class SshDemo {
 
         HostInfo hostInfo = new HostInfo(ip, port, username, password);
         SSHLinux sshLinux = new SSHLinux(hostInfo);
-
+        if (sshLinux.isConnected()){
+            System.out.println("连接成功");
+        }
 
 
 
