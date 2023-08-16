@@ -19,6 +19,7 @@
         <module>mail_demo</module>
         <module>charset_demo</module>
         <module>reflect_demo</module>
+        <module>sortdemo</module>
     </modules>
 
     <packaging>pom</packaging>
